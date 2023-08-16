@@ -1,0 +1,49 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet"> 
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>MY HABIT TRACKER</h1>
+        <h2>Track your water intake</h2>
+        <div id="water-count">
+            <h1>Goal: 8 glasses a day</h1>
+            <h2 id="date"></h2>
+            <img src="images/water.png">
+            <div class="counter-container">
+                <!-- <button id="minus-btn" onclick="minus()">- 1</button> -->
+                <h2 id="count-el">0</h2>
+                <button id="plus-btn" onclick="plus()">LOG</button>
+            </div>
+            <button class="save-btn" onclick="save()">SAVE</button>
+            <button class="reset-btn" onclick="reset()">RESET WEEK</button>
+            <!-- <p>My Intake:</p>
+            <p id="save-el"></p> -->
+           <div id="goal">
+                <H3 id="save-h-el">H</H3>
+                <p  ></p>
+                <H3 id="save-y-el">Y</H3>
+                <p id="save-y-el" class="save-el"></p>
+                <H3 id="save-d-el">D</H3>
+                <p class="save-el"></p>
+                <H3 id="save-r-el">R</H3>
+                <p  class="save-el"></p>
+                <H3 id="save-a-el">A</H3>
+                <p  class="save-el"></p>
+                <H3 id="save-t-el">T</H3>
+                <p  class="save-el"></p>
+                <H3 id="save-e-el">E</H3>
+                <p  class="save-el"></p>
+                <H3 id="save-d2-el">D</H3>
+                <p  class="save-el"></p>
+           </div> 
+        </div>
+        <script src="index.js">           
+        </script>
+    </body>
+</html> 
