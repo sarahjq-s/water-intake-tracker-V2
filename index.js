@@ -29,6 +29,7 @@ function plus(){
 function save(){
     if(count === 0){
         saveH.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count === 1){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "rgba(255,255,255,0.5)";
@@ -38,6 +39,7 @@ function save(){
         saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }
     else if(count === 2){
         saveH.style.backgroundColor = "#219ebc";
@@ -48,6 +50,7 @@ function save(){
         saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count === 3){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -57,6 +60,7 @@ function save(){
         saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count ===4){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -66,6 +70,7 @@ function save(){
         saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count ===5){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -75,6 +80,7 @@ function save(){
         saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count === 6){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -84,6 +90,7 @@ function save(){
         saveT.style.backgroundColor = "#219ebc";
         saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count === 7){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -93,6 +100,7 @@ function save(){
         saveT.style.backgroundColor = "#219ebc";
         saveE.style.backgroundColor = "#219ebc";
         saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+        goal.textContent = "Goal: 8 glasses a day"
     }else if(count >= 8){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -102,7 +110,7 @@ function save(){
         saveT.style.backgroundColor = "#219ebc";
         saveE.style.backgroundColor = "#219ebc";
         saveD2.style.backgroundColor = "#219ebc";
-        goal.textContent = "Great job!"
+        goal.textContent = "Great job! You achieved your goal!"
     }
 }
 
@@ -118,7 +126,7 @@ function reset(){
     saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
     countEl.textContent = 0
     count = 0
-    goal.textContent = " "
+    goal.textContent = "Goal: 8 glasses a day"
 
 }
 
