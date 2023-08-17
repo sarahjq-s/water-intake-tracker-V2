@@ -7,108 +7,84 @@ let saveT = document.getElementById("save-t-el")
 let saveE = document.getElementById("save-e-el")
 let saveD2 = document.getElementById("save-d2-el")
 
-let resetWeek = document.getElementsByClassName("save-el", [1])
+let goal = document.getElementById('goal-message')
+let isEight = false
+
 let countEl = document.getElementById("count-el")
 let count = 0
 
-// function minus(){
-//    if (count > 0){
-//     count -= 1
-//     countEl.textContent = count
-// }
-// }
-
+function minus(){
+    if (count > 0){
+     count -= 1
+     countEl.textContent = count
+ }
+}
+ 
 function plus(){
+    let waterCount = count 
     count += 1
     countEl.textContent = count
-
-    let waterCount = count 
-    // countEl.textContent = 0
-    // count = 0
-    // saveH.textContent += waterCount;
-    // if(count === 1){
-    //     saveH.style.backgroundColor = "#219ebc";
-    // }
-    // else if(count <= 2){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    // }else if(count <= 3){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    // }else if(count <=4){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    //     saveR.style.backgroundColor = "#219ebc";
-    // }else if(count <=5){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    //     saveR.style.backgroundColor = "#219ebc";
-    //     saveA.style.backgroundColor = "#219ebc";
-    // }else if(count <= 6){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    //     saveR.style.backgroundColor = "#219ebc";
-    //     saveA.style.backgroundColor = "#219ebc";
-    //     saveT.style.backgroundColor = "#219ebc";
-    // }else if(count <= 7){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    //     saveR.style.backgroundColor = "#219ebc";
-    //     saveA.style.backgroundColor = "#219ebc";
-    //     saveT.style.backgroundColor = "#219ebc";
-    //     saveE.style.backgroundColor = "#219ebc";
-    // }else if(count >= 8){
-    //     saveH.style.backgroundColor = "#219ebc";
-    //     saveY.style.backgroundColor = "#219ebc";
-    //     saveD.style.backgroundColor = "#219ebc";
-    //     saveR.style.backgroundColor = "#219ebc";
-    //     saveA.style.backgroundColor = "#219ebc";
-    //     saveT.style.backgroundColor = "#219ebc";
-    //     saveE.style.backgroundColor = "#219ebc";
-    //     saveD2.style.backgroundColor = "#219ebc";
-    // }
-
 }
 
 function save(){
-    let waterCount = count 
-    // countEl.textContent = 0
-    // count = 0
-    // saveH.textContent += waterCount;
-    if(count === 1){
+    if(count === 0){
+        saveH.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count === 1){
         saveH.style.backgroundColor = "#219ebc";
+        saveY.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
     }
-    else if(count <= 2){
+    else if(count === 2){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
-    }else if(count <= 3){
+        saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count === 3){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
         saveD.style.backgroundColor = "#219ebc";
-    }else if(count <=4){
+        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count ===4){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
         saveD.style.backgroundColor = "#219ebc";
         saveR.style.backgroundColor = "#219ebc";
-    }else if(count <=5){
+        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count ===5){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
         saveD.style.backgroundColor = "#219ebc";
         saveR.style.backgroundColor = "#219ebc";
         saveA.style.backgroundColor = "#219ebc";
-    }else if(count <= 6){
+        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count === 6){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
         saveD.style.backgroundColor = "#219ebc";
         saveR.style.backgroundColor = "#219ebc";
         saveA.style.backgroundColor = "#219ebc";
         saveT.style.backgroundColor = "#219ebc";
-    }else if(count <= 7){
+        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
+    }else if(count === 7){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
         saveD.style.backgroundColor = "#219ebc";
@@ -116,6 +92,7 @@ function save(){
         saveA.style.backgroundColor = "#219ebc";
         saveT.style.backgroundColor = "#219ebc";
         saveE.style.backgroundColor = "#219ebc";
+        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
     }else if(count >= 8){
         saveH.style.backgroundColor = "#219ebc";
         saveY.style.backgroundColor = "#219ebc";
@@ -125,22 +102,23 @@ function save(){
         saveT.style.backgroundColor = "#219ebc";
         saveE.style.backgroundColor = "#219ebc";
         saveD2.style.backgroundColor = "#219ebc";
+        goal.textContent = "Great job!"
     }
 }
 
 
 function reset(){
-    saveH.style.backgroundColor = "#fff";
-    saveY.style.backgroundColor = "#fff";
-    saveD.style.backgroundColor = "#fff";
-    saveR.style.backgroundColor = "#fff";
-    saveA.style.backgroundColor = "#fff";
-    saveT.style.backgroundColor = "#fff";
-    saveE.style.backgroundColor = "#fff";
-    saveD2.style.backgroundColor = "#fff";
+    saveH.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveY.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
+    saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
     countEl.textContent = 0
     count = 0
+    goal.textContent = " "
+
 }
-
-
 

@@ -18,6 +18,9 @@ h1 {
     margin-top: 40px;
     margin-bottom: 10px;
 }
+a{
+    color: #3a5a40;
+}
 img {
     width: 50px;
     border: 2px solid #e9edc9;
@@ -26,26 +29,31 @@ img {
     margin-bottom: 15px;
     padding: 15px;
 }
-
+#goal-message{
+    margin-top: 0;
+    color: #3a5a40;
+    letter-spacing: 3.5px;
+    font-size: 45px;
+    text-shadow: 1px 1px 0 black;
+}
 #water-count{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background:rgba(255,255,255,0.5);     
-    margin: 100px 150px;
-    max-width: 80%;
-    height: 425px;
-    max-height: 80%;
-}
-#water-count h1 {
-    margin-top: 0;
-}
-#water-count h2 {
-    margin: 0 25px 20px;
-    font-size: 55px;
+    margin: 50px auto;
+    height: 550px;
+    max-height: 100vh;
 }
 
+#water-count h2 {
+    margin-bottom: 20px;
+}
+#water-count h3{
+    margin: 0 25px 20px;
+    font-size: 40px;
+}
 #water-count p{
     margin-bottom: 25px;
 }
@@ -60,11 +68,14 @@ button {
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
+    text-shadow: 1px 1px 0 black;
     font-weight: bold;
     width:50px;
     margin-bottom: 5px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 3px 5px black;
+
 }
 
 #minus-btn {
@@ -85,13 +96,22 @@ button {
     margin-bottom: 15px;
     background: #c1121f;
     color: #e9edc9;
-    width: 130px;
+    width: 100px;
 }
 #goal{
-    display: flex;    
+    display: flex;  
 }
 #goal h3{
-    padding: 15px;
+    margin: 25px 6px 0;
+    padding: 18px;
     font-size: 35px;
-    border: 2px solid #8ecae6;
+    border: 2px solid #a8dadc;
+    border-radius: 20px;
+    box-shadow: 5px 8px #1d3557;
 }
+
+footer{
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #3a5a40;
+}
+

@@ -12,38 +12,35 @@
         <h1>MY HABIT TRACKER</h1>
         <h2>Track your water intake</h2>
         <div id="water-count">
-            <h1>Goal: 8 glasses a day</h1>
-            <h2 id="date"></h2>
+            <h1 id="goal-message"></h1>
+            <h2>Goal: 8 glasses a day</h2>
+            
             <img src="images/water.png">
             <div class="counter-container">
-                <!-- <button id="minus-btn" onclick="minus()">- 1</button> -->
-                <h2 id="count-el">0</h2>
-                <button id="plus-btn" onclick="plus()">LOG</button>
+                <button id="minus-btn" onclick="minus()">- 1</button>
+                <h3 id="count-el">0</h3>
+                <button id="plus-btn" onclick="plus()">+ 1</button>
             </div>
             <button class="save-btn" onclick="save()">SAVE</button>
-            <button class="reset-btn" onclick="reset()">RESET WEEK</button>
-            <!-- <p>My Intake:</p>
-            <p id="save-el"></p> -->
+            <button class="reset-btn" onclick="reset()">RESET</button>
+         
            <div id="goal">
                 <H3 id="save-h-el">H</H3>
-                <p  ></p>
                 <H3 id="save-y-el">Y</H3>
-                <p id="save-y-el" class="save-el"></p>
                 <H3 id="save-d-el">D</H3>
-                <p class="save-el"></p>
                 <H3 id="save-r-el">R</H3>
-                <p  class="save-el"></p>
                 <H3 id="save-a-el">A</H3>
-                <p  class="save-el"></p>
                 <H3 id="save-t-el">T</H3>
-                <p  class="save-el"></p>
                 <H3 id="save-e-el">E</H3>
-                <p  class="save-el"></p>
                 <H3 id="save-d2-el">D</H3>
-                <p  class="save-el"></p>
            </div> 
         </div>
         <script src="index.js">           
         </script>
+        <footer>
+            <p>&copy;2023 || Made with &hearts; by Sarah Saballa || <a target="_blank" href="https://github.com/sarahjq-s">Github</a></p>
+            <p>Photo by <a href="https://unsplash.com/@simonsun2017?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">simon sun</a> on <a href="https://unsplash.com/photos/i_d8v5klXrU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            <p><a href="https://www.flaticon.com/">Icons from Flaticon</a></p>
+        </footer>
     </body>
 </html> 
