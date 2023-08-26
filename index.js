@@ -1,12 +1,3 @@
-let saveH = document.getElementById("save-h-el")
-let saveY = document.getElementById("save-y-el")
-let saveD = document.getElementById("save-d-el")
-let saveR = document.getElementById("save-r-el")
-let saveA = document.getElementById("save-a-el")
-let saveT = document.getElementById("save-t-el")
-let saveE = document.getElementById("save-e-el")
-let saveD2 = document.getElementById("save-d2-el")
-
 let goal = document.getElementById('goal-message')
 let isEight = false
 
@@ -15,118 +6,80 @@ let count = 0
 
 function minus(){
     if (count > 0){
-     count -= 1
-     countEl.textContent = count
+     count -= 1;
+     countEl.textContent = count;
  }
 }
  
 function plus(){
-    let waterCount = count 
-    count += 1
-    countEl.textContent = count
+    let waterCount = count;
+    count += 1;
+    countEl.textContent = count;
 }
 
+/**HYDRATED**/
+let hydrate = document.querySelectorAll("h3.letter")
+
+let clearColor = "rgba(255,255,255,0.5)"
+let blueColor = "#219ebc"
+
+function applyBlue(element, blueColor){
+    element.style.backgroundColor = blueColor;   
+}
+
+function applyClear(element, clearColor){
+    element.style.backgroundColor = clearColor;
+}  
+
+/**COLOR FILLED AS YOU LOG INTAKE */
 function save(){
+    for(let i = 0; i < hydrate.length; i++)
     if(count === 0){
-        saveH.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Goal: 8 glasses a day"
+        applyClear(hydrate[i], clearColor); 
+        goal.textContent = "Goal: 8 glasses a day";
     }else if(count === 1){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Goal: 8 glasses a day"
-    }
-    else if(count === 2){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Goal: 8 glasses a day"
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor); 
+        goal.textContent = "Goal: 8 glasses a day";
+    }else if(count === 2){
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor); 
+        applyBlue(hydrate[1], blueColor); 
+        goal.textContent = "Goal: 8 glasses a day";
     }else if(count === 3){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Goal: 8 glasses a day"
-    }else if(count ===4){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "#219ebc";
-        saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "You got this!"
-    }else if(count ===5){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "#219ebc";
-        saveA.style.backgroundColor = "#219ebc";
-        saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "You got this!"
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor); 
+        applyBlue(hydrate[1], blueColor); applyBlue(hydrate[2], blueColor); 
+        goal.textContent = "Goal: 8 glasses a day";
+    }else if(count === 4){
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor);
+        applyBlue(hydrate[1], blueColor); applyBlue(hydrate[2], blueColor);
+        applyBlue(hydrate[3], blueColor); 
+        goal.textContent = "You got this!";
+    }else if(count === 5){
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor);
+        applyBlue(hydrate[1], blueColor); applyBlue(hydrate[2], blueColor);
+        applyBlue(hydrate[3], blueColor); applyBlue(hydrate[4], blueColor); 
+        goal.textContent = "You got this!";
     }else if(count === 6){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "#219ebc";
-        saveA.style.backgroundColor = "#219ebc";
-        saveT.style.backgroundColor = "#219ebc";
-        saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Keep going, almost there!"
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor); 
+        applyBlue(hydrate[1], blueColor); applyBlue(hydrate[2], blueColor);
+        applyBlue(hydrate[3], blueColor); applyBlue(hydrate[4], blueColor);
+        applyBlue(hydrate[5], blueColor); 
+        goal.textContent = "Keep going, almost there!";
     }else if(count === 7){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "#219ebc";
-        saveA.style.backgroundColor = "#219ebc";
-        saveT.style.backgroundColor = "#219ebc";
-        saveE.style.backgroundColor = "#219ebc";
-        saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-        goal.textContent = "Keep going, almost there!"
+        applyClear(hydrate[i], clearColor); applyBlue(hydrate[0], blueColor);
+        applyBlue(hydrate[1], blueColor); applyBlue(hydrate[2], blueColor); 
+        applyBlue(hydrate[3], blueColor); applyBlue(hydrate[4], blueColor); 
+        applyBlue(hydrate[5], blueColor); applyBlue(hydrate[6], blueColor);
+        goal.textContent = "Keep going, almost there!";
     }else if(count >= 8){
-        saveH.style.backgroundColor = "#219ebc";
-        saveY.style.backgroundColor = "#219ebc";
-        saveD.style.backgroundColor = "#219ebc";
-        saveR.style.backgroundColor = "#219ebc";
-        saveA.style.backgroundColor = "#219ebc";
-        saveT.style.backgroundColor = "#219ebc";
-        saveE.style.backgroundColor = "#219ebc";
-        saveD2.style.backgroundColor = "#219ebc";
+        applyBlue(hydrate [i], blueColor);
+        isEight = true;
         goal.textContent = "Great job! You achieved your goal!"
+        }      
     }
-}
-
 
 function reset(){
-    saveH.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveY.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveD.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveR.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveA.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveT.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveE.style.backgroundColor = "rgba(255,255,255,0.5)";
-    saveD2.style.backgroundColor = "rgba(255,255,255,0.5)";
-    countEl.textContent = 0
-    count = 0
-    goal.textContent = "Goal: 8 glasses a day"
-
-}
-
+    for(let i = 0; i < hydrate.length; i++)
+    applyClear(hydrate[i], clearColor);
+    countEl.textContent = 0; count = 0;
+    goal.textContent = "Goal: 8 glasses a day";
+} 
